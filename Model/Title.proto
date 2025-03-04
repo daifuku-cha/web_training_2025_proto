@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/Image.proto";
+import "Model/Volume.proto";
+import "Model/Author.proto";
+
+message Title {
+    uint32 id               = 1; // ID
+    string name             = 2; // タイトル名
+    string description      = 3; // 説明
+    string catch_phrase     = 4; // キャッチフレーズ
+    string copy_right       = 5; // 著作権
+    Image thumbnail         = 6; // サムネイル
+    Volume volume           = 7; // タイトルに紐づく１巻
+    Volume related_volume   = 8; // タイトルに関連する１巻
+    Badge badge             = 9; // バッジ
+    Author author           = 10; // 著者
+    uint32 first_chapter_id = 11; // １話目のchapterのid
+
+    enum Badge {
+        NONE = 0; // バッジなし
+        NEW  = 1; // 新刊
+    }
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/User.proto";
+
+message UserView {
+    User user = 1; // ユーザ情報
+}

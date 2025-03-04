@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/Title.proto";
+import "Model/Chapter.proto";
+
+message TitleDetailView {
+    Title title               = 1; // 作品情報
+    repeated Chapter chapters = 2; // チャプターリスト
+    string advertisement      = 3; // 作品インフォメーション
+}

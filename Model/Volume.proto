@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/Image.proto";
+
+message Volume {
+    uint32 id             = 1; // ID
+    string name           = 2; // 名前
+    string description    = 3; // 説明
+    string catch_phrase   = 4; // キャッチコピー
+    string release_date   = 5; // 発売日
+    Image thumbnail       = 6; // サムネ画像
+}

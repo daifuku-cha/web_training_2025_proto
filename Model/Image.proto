@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+message Image {
+  string src            = 1; // 画像のURL
+  uint32 height         = 2; // 画像の高さ
+  uint32 width          = 3; // 画像の幅
+  string alt            = 4; // 画像のAlt情報
+  optional string url   = 5; // 遷移先（セットされていない場合、タップしても遷移しない）
+}

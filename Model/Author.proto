@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+message Author {
+    uint32 id   = 1; // ID
+    string name = 2; // 作者名
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/Banner.proto";
+import "Model/Title.proto";
+import "Model/Volume.proto";
+
+message TopView {
+    repeated Banner banners      = 1; // トップページのバナー
+    repeated Title update_titles = 2; // 今日の更新作品
+    repeated Volume new_volumes  = 3; // 新着の巻
+}

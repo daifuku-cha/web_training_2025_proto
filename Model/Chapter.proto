@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "jp.co.linku.intern.proto";
+option objc_class_prefix = "INTERN";
+package Proto;
+
+import "Model/Period.proto";
+import "Model/Image.proto";
+
+message Chapter {
+    uint32 id                = 1; // ID
+    string name              = 2; // チャプター名
+    string sub_name          = 3; // サブチャプター名
+    optional Period period   = 4; // 公開期間（無期限の場合はNULL）
+    Image thumbnail          = 5; // サムネイル画像
+}
