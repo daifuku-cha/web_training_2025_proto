@@ -1,0 +1,2 @@
+# web_training_2025_proto
+2025年度web班研修で使用するproto
